@@ -34,3 +34,17 @@ def build_agency(bus_file: Path):
         for idx, agency in enumerate(bus["agency"].unique()):
             g.write(f"agency{idx+1:03},{agency},,KST,KO\n")
     return True
+
+
+def build_stops(stations_file: Path):
+    """
+    take the bus stops file from
+    """
+    stops = pd.read_excel(str(stations_file))
+    stops.columns = [
+        "node_id",
+        "ars_id",
+        "station_name",
+        "x",
+        "y",
+    ]

@@ -2,6 +2,24 @@
 
 서울시 대중교통중 GTFS화된 데이터가 없어서(적어도 공개된 데이터는 없더라) 직접 만드는 프로젝트.
 
+## 체크리스트
+- agency [완료]
+- stops
+- routes
+- trips
+- stop_times
+- calendar
+- calendar_dates
+- fare_attributes
+- fare_rules
+- shapes
+- pathways
+- frequencies
+- transfers
+- levels
+- translations
+- attributions
+
 ## 사용법
 ### 공통
 1. 가상환경을 만든다.
