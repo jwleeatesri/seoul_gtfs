@@ -19,3 +19,4 @@ pip install -r requirements.txt
 
 ### Todo
 * 지금 경로가 다 내 기준으로 작성됐는데 전부다 absolute 경로로 바꾸기
+* 하나만 돌려도 되게끔 main.py 파일 만들기
