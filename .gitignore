@@ -1,0 +1,5 @@
+gtfs_env/
+__pycache__/
+source/bus_2022_nov.xlsx
+gtfs/*
+.env
