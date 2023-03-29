@@ -3,22 +3,22 @@
 서울시 대중교통중 GTFS화된 데이터가 없어서(적어도 공개된 데이터는 없더라) 직접 만드는 프로젝트.
 
 ## 체크리스트
-- agency [완료]
-- stops [완료]
-- routes
-- trips
-- stop_times
-- calendar
-- calendar_dates
-- fare_attributes
-- fare_rules
-- shapes
-- pathways
-- frequencies
-- transfers
-- levels
-- translations
-- attributions
+- [x] agency 
+- [x] stops
+- [ ] routes
+- [ ] trips
+- [ ] stop_times
+- [ ] calendar
+- [ ] calendar_dates
+- [ ] fare_attributes
+- [ ] fare_rules
+- [ ] shapes
+- [ ] pathways
+- [ ] frequencies
+- [ ] transfers
+- [ ] levels
+- [ ] translations
+- [ ] attributions
 
 ## 사용법
 ### 공통
@@ -37,4 +37,4 @@ pip install -r requirements.txt
 
 ### Todo
 * [x] 지금 경로가 다 내 기준으로 작성됐는데 전부다 absolute 경로로 바꾸기
-* [] 하나만 돌려도 되게끔 main.py 파일 만들기
+* [ ] 하나만 돌려도 되게끔 main.py 파일 만들기
