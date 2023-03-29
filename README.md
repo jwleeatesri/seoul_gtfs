@@ -4,7 +4,7 @@
 
 ## 체크리스트
 - agency [완료]
-- stops
+- stops [완료]
 - routes
 - trips
 - stop_times
@@ -36,5 +36,5 @@ pip install -r requirements.txt
 3. builds.py 에서 `build_agency()`함수를 돌린다. 
 
 ### Todo
-* 지금 경로가 다 내 기준으로 작성됐는데 전부다 absolute 경로로 바꾸기
-* 하나만 돌려도 되게끔 main.py 파일 만들기
+* [x] 지금 경로가 다 내 기준으로 작성됐는데 전부다 absolute 경로로 바꾸기
+* [] 하나만 돌려도 되게끔 main.py 파일 만들기
