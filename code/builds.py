@@ -1,6 +1,12 @@
-import pandas as pd
+import requests
 import os
+
+import pandas as pd
+
+from dotenv import load_dotenv
 from pathlib import Path
+
+load_dotenv()
 
 
 def build_agency(bus_file: Path):
@@ -39,6 +45,7 @@ def build_agency(bus_file: Path):
 def build_stops(stations_file: Path):
     """
     take the bus stops file from
+    https://data.seoul.go.kr/dataList/OA-15067/S/1/datasetView.do
     """
     stops = pd.read_excel(str(stations_file))
     stops.columns = [
@@ -57,6 +64,37 @@ def build_stops(stations_file: Path):
         for row in stops.itertuples(index=False):
             g.write(f"{row[0]},{row[1]},{row[2]},{row[3]},{row[4]}\n")
     return True
+
+
+# def build_routes(route_file: Path):
+#     """
+#     build route.txt using
+#     https://data.seoul.go.kr/dataList/OA-1095/L/1/datasetView.do
+#     """
+
+#     def _get_api(route_id: str) -> :
+#         """
+#         helper for build route function
+#         """
+#         res = requests.get(
+#             URL="http://ws.bus.go.kr/api/rest/busRouteInfo/getRouteInfo",
+#             params={
+#                 "ServiceKey": os.getenv("DATA_KEY"),
+#                 "busRouteId": route_id,
+#                 "resultType": "json",
+#             },
+#         )
+#         if res.status_code != 200:
+#             raise ConnectionError("Something is wrong with the API")
+#         result = res.json()["msgBody"]["itemList"]
+#         return result
+
+#     route_ids = pd.read_excel(str(route_file))
+#     route_ids.columns = [
+#         "route_id",
+#         "agency_id",
+#         ""
+#     ]
 
 
 def main():

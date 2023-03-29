@@ -3,22 +3,23 @@
 서울시 대중교통중 GTFS화된 데이터가 없어서(적어도 공개된 데이터는 없더라) 직접 만드는 프로젝트.
 
 ## 체크리스트
-- [x] agency 
-- [x] stops
-- [ ] routes
-- [ ] trips
-- [ ] stop_times
-- [ ] calendar
-- [ ] calendar_dates
-- [ ] fare_attributes
-- [ ] fare_rules
-- [ ] shapes
-- [ ] pathways
-- [ ] frequencies
-- [ ] transfers
-- [ ] levels
-- [ ] translations
-- [ ] attributions
+- [x] agency (운송업체)
+- [x] stops (정류소)
+- [ ] routes (노선; 세부경로로 이루어짐)
+- [ ] trips (세부경로; 특정 기간에 정류장 2곳 이상을 이동)
+- [ ] stop_times (차량이 각 경로마다 정류장에 도착하고 출발하는 시간)
+- [ ] calendar (서비스 날짜 - 시작과 종료일)
+- [ ] calendar_dates (서비스 예외날짜)
+- [ ] fare_attributes (대중교통 요금)
+- [ ] fare_rules (요금 규칙)
+- [ ] shapes (쉐이프)
+- [ ] frequencies (운행 간격)
+- [ ] pathways (역 내 이동 통로)
+- [ ] transfers (환승 지점 연결 방식)
+- [ ] levels (역 내 층수)
+- [ ] feed_info (메타데이터)
+- [ ] translations (번역 정보)
+- [ ] attributions (데이터셋 속성)
 
 ## 사용법
 ### 공통
@@ -34,6 +35,9 @@ pip install -r requirements.txt
 1. [서울시 TOPIS](https://topis.seoul.go.kr/refRoom/openRefRoom_3_1.do)에서 월별 운행노선 현황을 다운 받는다.
 2. 엑셀 파일을 열고 첫 줄을 지운다.
 3. builds.py 에서 `build_agency()`함수를 돌린다. 
+
+### 작업 잡소리
+* route를 만들어보니까 지금까지 작성한 애들은 다시 리팩터링 해야할 듯. 데이터 작성에서 끝내지 말고 어차피 나중에 다시 참조해서 id 받아와야 되니까 작성된 데이터를 함수별로 리턴하자.
 
 ### Todo
 * [x] 지금 경로가 다 내 기준으로 작성됐는데 전부다 absolute 경로로 바꾸기
