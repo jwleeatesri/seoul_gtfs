@@ -31,13 +31,9 @@ pip install -r requirements.txt
 ```
 3. 나중에 만들 main.py 파일을 실행한다
 
-### Agency
-1. [서울시 TOPIS](https://topis.seoul.go.kr/refRoom/openRefRoom_3_1.do)에서 월별 운행노선 현황을 다운 받는다.
-2. 엑셀 파일을 열고 첫 줄을 지운다.
-3. builds.py 에서 `build_agency()`함수를 돌린다. 
-
 ### 작업 잡소리
 * route를 만들어보니까 지금까지 작성한 애들은 다시 리팩터링 해야할 듯. 데이터 작성에서 끝내지 말고 어차피 나중에 다시 참조해서 id 받아와야 되니까 작성된 데이터를 함수별로 리턴하자.
+* 모든 작업에 필요한 최소 데이터는 busRouteId다. 이 파일은 [서울 열린데이터 광장](data.seoul.go.kr)에서 "서울시 버스노선 기본정보 항목정보"로 찾을 수 있다.
 
 ### Todo
 * [x] 지금 경로가 다 내 기준으로 작성됐는데 전부다 absolute 경로로 바꾸기
